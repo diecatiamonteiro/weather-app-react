@@ -1,0 +1,57 @@
+/* Container for the sunrise/sunset visual */
+.sunrise-sunset-visual {
+  position: relative;
+  width: 250px;
+  height: 50px;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Arc of the sun's path */
+.sun-path {
+  position: absolute;
+  width: 100%;
+  height: 250%;
+  border: 2px solid #f39c12;
+  border-bottom: none;
+  border-radius: 125px 125px 0 0;
+}
+
+/* Sun icon */
+.sun-indicator {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-color: #f39c12;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Container for sunrise/sunset times */
+.sunrise-sunset-info {
+  position: relative;
+  width: 100%;
+}
+
+/* Sunrise/sunset times and labels */
+.sunrise-label,
+.sunset-label {
+  position: absolute;
+  top: 150px;
+  width: 105px;
+  padding: 5px 10px;
+  border-radius: 8px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  font-size: 1.2rem;
+}
+.sunrise-label {
+  left: -55px;
+  background: #f7c873;
+}
+.sunset-label {
+  right: -55px;
+  background: #ffc107;
+}
