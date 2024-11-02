@@ -1,8 +1,17 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react-swc'
 
-// https://vite.dev/config/
 export default defineConfig({
-  base: '/weather-app-react/',
   plugins: [react()],
+  build: {
+    outDir: 'dist',
+  },
+  server: {
+    proxy: {
+      '/api': {
+        target: 'http://localhost:10000',
+        changeOrigin: true,
+      }
+    }
+  }
 })
