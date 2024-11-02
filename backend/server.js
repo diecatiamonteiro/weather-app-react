@@ -8,7 +8,7 @@ import { fileURLToPath } from "url";
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 10000;
 const WEATHER_API_KEY = process.env.VITE_WEATHER_API_KEY;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -75,10 +75,6 @@ app.get("/api/forecast/coordinates", async (req, res) => {
   } catch (error) {
     res.status(500).json({ message: "Error fetching forecast data" });
   }
-});
-
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
 });
 
 app.use(express.static(path.join(__dirname, "../dist")));
