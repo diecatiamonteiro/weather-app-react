@@ -12,6 +12,7 @@ const PORT = process.env.PORT || 3001;
 const WEATHER_API_KEY = process.env.VITE_WEATHER_API_KEY;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+
 app.use(cors());
 app.use(express.json());
 
