@@ -32,11 +32,11 @@ function App() {
           try {
             // Fetch weather data
             const locationWeatherResponse = await fetch(
-              `http://api/weather/coordinates?lat=${latitude}&lon=${longitude}`
+              `https://api/weather/coordinates?lat=${latitude}&lon=${longitude}`
             );
             // Fetch forecast data
             const locationForecastResponse = await fetch(
-              `http://api/forecast/coordinates?lat=${latitude}&lon=${longitude}`
+              `https://api/forecast/coordinates?lat=${latitude}&lon=${longitude}`
             );
 
             const locationWeatherData = await locationWeatherResponse.json();
@@ -73,12 +73,12 @@ function App() {
 
         // Fetch weather data
         const searchWeatherResponse = await fetch(
-          `http://api/weather?city=${searchQuery}`
+          `https://api/weather?city=${searchQuery}`
         );
 
         // Fetch forecast data
         const searchForecastResponse = await fetch(
-          `http://api/forecast?city=${searchQuery}`
+          `https://api/forecast?city=${searchQuery}`
         );
 
         if (!searchWeatherResponse.ok) throw new Error("City not found");
