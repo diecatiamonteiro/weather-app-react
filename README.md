@@ -64,8 +64,8 @@ Skywise is designed for **desktop use only**. For the best experience, please ac
 
 ## Preview
 
-![Skywise Preview](public/app-preview-1.png)
-![Skywise Preview](public/app-preview-2.png)
+![Skywise Preview](public/app-preview1.png)
+![Skywise Preview](public/app-preview2.png)
 
 ---
 
